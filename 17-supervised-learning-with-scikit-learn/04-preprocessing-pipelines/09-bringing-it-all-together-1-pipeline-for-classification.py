@@ -35,6 +35,7 @@ Create training and test sets, with 20% of the data used for the test set. Use a
 Instantiate GridSearchCV with the pipeline and hyperparameter space and fit it to the training set. Use 3-fold cross-validation (This is the default, so you don't have to specify it).
 Predict the labels of the test set and compute the metrics. The metrics have been computed for you.
 '''
+
 # Setup the pipeline
 steps = [('scaler', StandardScaler()),
          ('SVM', SVC())]
@@ -58,6 +59,6 @@ cv.fit(X_train, y_train)
 y_pred = cv.predict(X_test)
 
 # Compute and print metrics
-print("Accuracy: {}".format(cv.score(X_test, y_test)))
+print(f"Accuracy: {cv.score(X_test, y_test)}")
 print(classification_report(y_test, y_pred))
-print("Tuned Model Parameters: {}".format(cv.best_params_))
+print(f"Tuned Model Parameters: {cv.best_params_}")

@@ -22,6 +22,7 @@ predictions.
 Save prediction_df to a csv file called 'predictions.csv' using the .to_csv() method.
 Submit the predictions for scoring by using the score_submission() function with pred_path set to 'predictions.csv'.
 '''
+
 # Generate predictions: predictions
 predictions = clf.predict_proba(holdout[NUMERIC_COLUMNS].fillna(-1000))
 
@@ -38,4 +39,6 @@ prediction_df.to_csv('predictions.csv')
 score = score_submission(pred_path='predictions.csv')
 
 # Print score
-print('Your model, trained with numeric data only, yields logloss score: {}'.format(score))
+print(
+    f'Your model, trained with numeric data only, yields logloss score: {score}'
+)

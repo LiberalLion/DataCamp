@@ -36,7 +36,7 @@ def perform_bernoulli_trials(n, p):
     n_success = 0
 
     # Perform trials
-    for i in range(n):
+    for _ in range(n):
         # Choose random number between zero and one: random_number
         random_number = np.random.random()
 

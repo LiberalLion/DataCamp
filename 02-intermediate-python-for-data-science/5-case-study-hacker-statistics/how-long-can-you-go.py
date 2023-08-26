@@ -15,6 +15,7 @@ Instructions
 -Use max() in a similar way to make sure that step doesn't go below zero if dice <= 2.
 -Hit Submit Answer and check the contents of random_walk.
 '''
+
 # Import numpy and set seed
 import numpy as np
 np.random.seed(123)
@@ -22,7 +23,7 @@ np.random.seed(123)
 # Initialize random_walk
 random_walk = [0]
 
-for x in range(100) :
+for _ in range(100):
     step = random_walk[-1]
     dice = np.random.randint(1,7)
 

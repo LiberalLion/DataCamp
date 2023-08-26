@@ -35,6 +35,7 @@ Inside GridSearchCV(), specify the classifier, parameter grid, and number of fol
 Use the .fit() method on the GridSearchCV object to fit it to the data X and y.
 Print the best parameter and best score obtained from GridSearchCV by accessing the best_params_ and best_score_ attributes of logreg_cv.
 '''
+
 # Import necessary modules
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
@@ -53,5 +54,5 @@ logreg_cv = GridSearchCV(logreg, param_grid, cv=5)
 logreg_cv.fit(X, y)
 
 # Print the tuned parameters and score
-print("Tuned Logistic Regression Parameters: {}".format(logreg_cv.best_params_)) 
-print("Best score is {}".format(logreg_cv.best_score_))
+print(f"Tuned Logistic Regression Parameters: {logreg_cv.best_params_}")
+print(f"Best score is {logreg_cv.best_score_}")

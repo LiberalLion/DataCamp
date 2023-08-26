@@ -15,15 +15,16 @@ Instructions
 -Finish the if condition so that step is set to 0 if a random float is less or
 equal to 0.001. Use np.random.rand().
 '''
+
 import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123)
 all_walks = []
 
 # Simulate random walk 250 times
-for i in range(250) :
+for _ in range(250):
     random_walk = [0]
-    for x in range(100) :
+    for _ in range(100):
         step = random_walk[-1]
         dice = np.random.randint(1,7)
         if dice <= 2:

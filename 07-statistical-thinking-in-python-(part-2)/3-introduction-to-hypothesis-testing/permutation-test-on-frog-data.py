@@ -1,10 +1,7 @@
 def diff_of_means(data_1, data_2):
     """Difference in means of two arrays."""
 
-    # The difference of means of data_1, data_2: diff
-    diff = np.mean(data_1) - np.mean(data_2)
-
-    return diff
+    return np.mean(data_1) - np.mean(data_2)
 
 # Compute difference of mean impact force from experiment: empirical_diff_means
 empirical_diff_means = diff_of_means(force_a, force_b)

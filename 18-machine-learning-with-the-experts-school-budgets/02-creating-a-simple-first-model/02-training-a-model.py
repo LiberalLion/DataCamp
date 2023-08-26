@@ -18,6 +18,7 @@ Instantiate the classifier clf by placing LogisticRegression() inside OneVsRestC
 Fit the classifier to the training data X_train and y_train.
 Compute and print the accuracy of the classifier using its .score() method, which accepts two arguments: X_test and y_test.
 '''
+
 # Import classifiers
 from sklearn.linear_model import LogisticRegression
 from sklearn.multiclass import OneVsRestClassifier
@@ -41,4 +42,4 @@ clf = OneVsRestClassifier(LogisticRegression())
 clf.fit(X_train, y_train)
 
 # Print the accuracy
-print("Accuracy: {}".format(clf.score(X_test, y_test)))
+print(f"Accuracy: {clf.score(X_test, y_test)}")

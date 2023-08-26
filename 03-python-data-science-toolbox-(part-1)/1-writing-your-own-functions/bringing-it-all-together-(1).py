@@ -24,6 +24,7 @@ Instructions
 dictionary langs_count, add 1 to its current value, else add the key to langs_count
 and set its value to 1. Use the loop variable entry in your code.
 '''
+
 # Import pandas
 import pandas as pd
 
@@ -40,9 +41,8 @@ col = df['lang']
 for entry in col:
 
     # If the language is in langs_count, add 1
-    if entry in langs_count.keys():
+    if entry in langs_count:
         langs_count[entry] += 1
-    # Else add the language to langs_count, set the value to 1
     else:
         langs_count[entry] = 1
 

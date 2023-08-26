@@ -16,17 +16,13 @@ showed in the video, you'll need to apply the method read() to the object file.
 -Close the file using the close() method.
 -Check again that the file is closed as you did above.
 '''
-# Open a file: file
-file = open('../_datasets/moby_dick.txt', mode='r')
 
-# Print it
-print(file.read())
+with open('../_datasets/moby_dick.txt', mode='r') as file:
+    # Print it
+    print(file.read())
 
-# Check whether file is closed
-print(file.closed)
-
-# Close file
-file.close()
+    # Check whether file is closed
+    print(file.closed)
 
 # Check whether file is closed
 print(file.closed)

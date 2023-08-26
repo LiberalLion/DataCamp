@@ -10,15 +10,16 @@ To make sure we've got enough simulations, go crazy. Simulate the random walk 50
 From np_aw_t, select the last row. This contains the endpoint of all 500 random walks you've simulated. Store this Numpy array as ends.
 Use plt.hist() to build a histogram of ends. Don't forget plt.show() to display the plot.
 '''
+
 import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123)
 all_walks = []
 
 # Simulate random walk 500 times
-for i in range(500) :
+for _ in range(500):
     random_walk = [0]
-    for x in range(100) :
+    for _ in range(100):
         step = random_walk[-1]
         dice = np.random.randint(1,7)
         if dice <= 2:

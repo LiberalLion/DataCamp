@@ -13,13 +13,14 @@ Append medal_df to medals.
 Concatenate the list of DataFrames medals into a single DataFrame called medals. Be sure to use the keyword argument keys=['bronze', 'silver', 'gold'] to create a vertically stacked DataFrame with a MultiIndex.
 Print the new DataFrame medals. This has been done for you, so hit 'Submit Answer' to see the result!
 '''
+
 for medal in medal_types:
 
-    file_name = "%s_top5.csv" % medal
+    file_name = f"{medal}_top5.csv"
 
     # Read file_name into a DataFrame: medal_df
     medal_df = pd.read_csv(file_name, index_col='Country')
-    
+
     # Append medal_df to medals
     medals.append(medal_df)
 

@@ -19,6 +19,7 @@ Calculate the circumference of the circle and store it in C.
 Calculate the area of the circle and store it in A.
 '''
 
+
 # Definition of radius
 r = 0.43
 
@@ -32,5 +33,5 @@ C = 2 * math.pi * r
 A = math.pi * (r**2)
 
 # Build printout
-print("Circumference: " + str(C))
-print("Area: " + str(A))
+print(f"Circumference: {str(C)}")
+print(f"Area: {str(A)}")

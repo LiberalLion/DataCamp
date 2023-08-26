@@ -15,6 +15,7 @@ Compute the AUC scores by performing 5-fold cross-validation. Use the cross_val_
 '''
 
 
+
 # Import necessary modules
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import cross_val_score
@@ -23,11 +24,11 @@ from sklearn.model_selection import cross_val_score
 y_pred_prob = logreg.predict_proba(X_test)[:,1]
 
 # Compute and print AUC score
-print("AUC: {}".format(roc_auc_score(y_test, y_pred_prob)))
+print(f"AUC: {roc_auc_score(y_test, y_pred_prob)}")
 
 # Compute cross-validated AUC scores: cv_auc
 cv_auc = cross_val_score(logreg, X, y, cv=5,
 scoring='roc_auc')
 
 # Print list of AUC scores
-print("AUC scores computed using 5-fold cross-validation: {}".format(cv_auc))
+print(f"AUC scores computed using 5-fold cross-validation: {cv_auc}")

@@ -12,11 +12,7 @@ class MyStreamListener(tweepy.StreamListener):
         self.file.write(json.dumps(tweet) + '\n')
         tweet_list.append(status)
         self.num_tweets += 1
-        if self.num_tweets < 100:
-            return True
-        else:
-            return False
-        self.file.close()
+        return self.num_tweets < 100
 
 # Store OAuth authentication credentials in relevant variables (these are DataCamp tokens)
 access_token = "1092294848-aHN7DcRP9B4VMTQIhwqOYiB14YkW92fFO8k8EPy"

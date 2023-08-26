@@ -9,6 +9,7 @@ INSTRUCTIONS
 100XP
 Compile the model using model.compile(). Your optimizer should be 'adam' and the loss should be 'mean_squared_error'.
 '''
+
 # Import necessary modules
 import keras
 from keras.layers import Dense
@@ -25,4 +26,4 @@ model.add(Dense(1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 
 # Verify that model contains information from compiling
-print("Loss function: " + model.loss)
+print(f"Loss function: {model.loss}")

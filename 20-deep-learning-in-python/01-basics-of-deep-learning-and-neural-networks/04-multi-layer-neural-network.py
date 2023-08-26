@@ -39,12 +39,8 @@ def predict_with_network(input_data):
 
     # Put node values into array: hidden_1_outputs
     hidden_1_outputs = np.array([node_1_0_output, node_1_1_output])
-    
-    # Calculate output here: model_output
-    model_output = (hidden_1_outputs * weights['output']).sum()
-    
-    # Return model_output
-    return(model_output)
+
+    return (hidden_1_outputs * weights['output']).sum()
 
 output = predict_with_network(input_data)
 print(output)

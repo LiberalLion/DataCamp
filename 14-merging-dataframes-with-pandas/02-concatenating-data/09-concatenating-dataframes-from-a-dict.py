@@ -10,17 +10,14 @@ Group month_data by 'Company' and use .sum() to aggregate.
 Construct a new DataFrame called sales by concatenating the DataFrames stored in month_dict.
 Create an alias for pd.IndexSlice and print all sales by 'Mediacore'. This has been done for you, so hit 'Submit Answer' to see the result!
 '''
+
 # Make the list of tuples: month_list
 month_list = [('january', jan), ('february', feb), ('march', mar)]
 
-# Create an empty dictionary: month_dict
-month_dict = {}
-
-for month_name, month_data in month_list:
-
-    # Group month_data: month_dict[month_name]
-    month_dict[month_name] = month_data.groupby('Company').sum()
-
+month_dict = {
+    month_name: month_data.groupby('Company').sum()
+    for month_name, month_data in month_list
+}
 # Concatenate data in month_dict: sales
 sales = pd.concat(month_dict)
 

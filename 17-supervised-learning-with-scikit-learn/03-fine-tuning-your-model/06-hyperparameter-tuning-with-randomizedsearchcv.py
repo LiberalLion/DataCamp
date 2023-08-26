@@ -17,6 +17,7 @@ Inside RandomizedSearchCV(), specify the classifier, parameter distribution, and
 Use the .fit() method on the RandomizedSearchCV object to fit it to the data X and y.
 Print the best parameter and best score obtained from RandomizedSearchCV by accessing the best_params_ and best_score_ attributes of tree_cv.
 '''
+
 # Import necessary modules
 from scipy.stats import randint
 from sklearn.tree import DecisionTreeClassifier
@@ -38,5 +39,5 @@ tree_cv = RandomizedSearchCV(tree, param_dist, cv=5)
 tree_cv.fit(X, y)
 
 # Print the tuned parameters and score
-print("Tuned Decision Tree Parameters: {}".format(tree_cv.best_params_))
-print("Best score is {}".format(tree_cv.best_score_))
+print(f"Tuned Decision Tree Parameters: {tree_cv.best_params_}")
+print(f"Best score is {tree_cv.best_score_}")

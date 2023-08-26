@@ -38,7 +38,7 @@ def shout_echo(word1, echo=1):
         echo_word = word1 * echo
 
         # Concatenate '!!!' to echo_word: shout_words
-        shout_words = echo_word + '!!!'
+        shout_words = f'{echo_word}!!!'
     except:
         # Print error message
         print("word1 must be a string and echo must be an integer.")

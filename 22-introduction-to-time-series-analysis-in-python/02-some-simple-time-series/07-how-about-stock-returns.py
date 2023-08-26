@@ -10,6 +10,7 @@ Create a new DataFrame of AMZN returns by taking the percent change of prices us
 Eliminate the NaN in the first row of returns using the .dropna() method on the DataFrame.
 Run the Augmented Dickey-Fuller test on the Adj Close column of the returns DataFrame, and print out the p-value in `results[1].
 '''
+
 # Import the adfuller module from statsmodels
 from statsmodels.tsa.stattools import adfuller
 
@@ -21,4 +22,4 @@ AMZN_ret = AMZN_ret.dropna()
 
 # Run the ADF test on the return series and print out the p-value
 results = adfuller(AMZN_ret['Adj Close'])
-print('The p-value of the test on returns is: ' + str(results[1]))
+print(f'The p-value of the test on returns is: {str(results[1])}')

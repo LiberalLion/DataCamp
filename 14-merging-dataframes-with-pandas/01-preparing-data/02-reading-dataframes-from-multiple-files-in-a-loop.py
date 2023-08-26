@@ -15,16 +15,13 @@ Iterate over filenames.
 Read each CSV file in filenames into a DataFrame and append it to dataframes by using pd.read_csv() inside a call to .append().
 Print the first 5 rows of the first DataFrame of the list dataframes. This has been done for you, so hit 'Submit Answer' to see the results.
 '''
+
 # Import pandas
 import pandas as pd
 
 # Create the list of file names: filenames
 filenames = ['Gold.csv', 'Silver.csv', 'Bronze.csv']
 
-# Create the list of three DataFrames: dataframes
-dataframes = []
-for filename in filenames:
-    dataframes.append(pd.read_csv(filename))
-
+dataframes = [pd.read_csv(filename) for filename in filenames]
 # Print top 5 rows of 1st DataFrame in dataframes
 print(dataframes[0].head())

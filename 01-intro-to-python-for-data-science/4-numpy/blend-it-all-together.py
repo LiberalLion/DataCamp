@@ -26,6 +26,7 @@ index for np_heights. Assign the result to other_heights.
 -Print out the median height of the goalkeepers using np.median(). Replace None with the correct code.
 -Do the same for the other players. Print out their median height. Replace None with the correct code.
 '''
+
 # heights and positions are available as lists
 
 # Import numpy
@@ -44,7 +45,7 @@ gk_heights = np_heights[np_positions == 'GK']
 other_heights = np_heights[np_positions != 'GK']
 
 # Print out the median height of goalkeepers. Replace 'None'
-print("Median height of goalkeepers: " + str(np.median(gk_heights)))
+print(f"Median height of goalkeepers: {str(np.median(gk_heights))}")
 
 # Print out the median height of other players. Replace 'None'
-print("Median height of other players: " + str(np.median(other_heights)))
+print(f"Median height of other players: {str(np.median(other_heights))}")

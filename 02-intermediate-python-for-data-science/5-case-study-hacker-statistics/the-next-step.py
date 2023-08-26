@@ -14,6 +14,7 @@ Instructions
     -The code that appends step to random_walk is already coded.
 Print out random_walk.
 '''
+
 # Import numpy and set seed
 import numpy as np
 np.random.seed(123)
@@ -22,7 +23,7 @@ np.random.seed(123)
 random_walk = [0]
 
 # Complete the loop
-for x in  range(100):
+for _ in range(100):
     # Set step: last element in random_walk
     step = random_walk[-1]
 

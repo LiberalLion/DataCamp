@@ -12,6 +12,7 @@ Instantiate vec_basic and vec_alphanumeric using, respectively, the TOKENS_BASIC
 Create the text vector by using the combine_text_columns() function on df.
 Using the .fit_transform() method with text_vector, fit and transform first vec_basic and then vec_alphanumeric. Print the number of tokens they contain.
 '''
+
 # Import the CountVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -34,10 +35,12 @@ text_vector = combine_text_columns(df)
 vec_basic.fit_transform(text_vector)
 
 # Print number of tokens of vec_basic
-print("There are {} tokens in the dataset".format(len(vec_basic.get_feature_names())))
+print(f"There are {len(vec_basic.get_feature_names())} tokens in the dataset")
 
 # Fit and transform vec_alphanumeric
 vec_alphanumeric.fit_transform(text_vector)
 
 # Print number of tokens of vec_alphanumeric
-print("There are {} alpha-numeric tokens in the dataset".format(len(vec_alphanumeric.get_feature_names())))
+print(
+    f"There are {len(vec_alphanumeric.get_feature_names())} alpha-numeric tokens in the dataset"
+)

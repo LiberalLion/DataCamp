@@ -23,18 +23,7 @@ def find_selfloop_nodes(G):
     """
     Finds all nodes that have self-loops in the graph G.
     """
-    nodes_in_selfloops = []
-    
-    # Iterate over all the edges of G
-    for u, v in G.edges():
-    
-    # Check if node u and node v are the same
-        if u == v:
-        
-            # Append node u to nodes_in_selfloops
-            nodes_in_selfloops.append(u)
-            
-    return nodes_in_selfloops
+    return [u for u, v in G.edges() if u == v]
 
 # Check whether number of self loops equals the number of nodes in self loops
 assert T.number_of_selfloops() == len(find_selfloop_nodes(T))

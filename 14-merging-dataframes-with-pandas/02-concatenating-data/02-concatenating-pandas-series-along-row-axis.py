@@ -16,13 +16,8 @@ Concatenate the Series contained in the list units into a longer Series called q
 Specify the keyword argument axis='rows' to stack the Series vertically.
 Verify that quarter1 has the individual Series stacked vertically by printing slices. This has been done for you, so hit 'Submit Answer' to see the result!
 '''
-# Initialize empty list: units
-units = []
 
-# Build the list of Series
-for month in [jan, feb, mar]:
-    units.append(month['Units'])
-
+units = [month['Units'] for month in [jan, feb, mar]]
 # Concatenate the list: quarter1
 quarter1 = pd.concat(units, axis='rows')
 

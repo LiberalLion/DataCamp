@@ -26,7 +26,9 @@ def three_shouts(word1, word2, word3):
     # Define inner
     def inner(word):
         """Returns a string concatenated with '!!!'."""
-        return word + '!!!'
+        return f'{word}!!!'
+
+        # Return a tuple of strings
 
     # Return a tuple of strings
     return (inner(word1), inner(word2) ,inner(word3))

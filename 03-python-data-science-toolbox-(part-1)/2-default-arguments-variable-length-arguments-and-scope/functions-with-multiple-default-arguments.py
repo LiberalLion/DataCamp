@@ -29,16 +29,7 @@ def shout_echo(word1, echo=1, intense=False):
     # Concatenate echo copies of word1 using *: echo_word
     echo_word = word1 * echo
 
-    # Capitalize echo_word if intense is True
-    if intense is True:
-        # Capitalize and concatenate '!!!': echo_word_new
-        echo_word_new = echo_word.upper() + '!!!'
-    else:
-        # Concatenate '!!!' to echo_word: echo_word_new
-        echo_word_new = echo_word + '!!!'
-
-    # Return echo_word_new
-    return echo_word_new
+    return f'{echo_word.upper()}!!!' if intense is True else f'{echo_word}!!!'
 
 # Call shout_echo() with "Hey", echo=5 and intense=True: with_big_echo
 with_big_echo = shout_echo('Hey', 5, True)

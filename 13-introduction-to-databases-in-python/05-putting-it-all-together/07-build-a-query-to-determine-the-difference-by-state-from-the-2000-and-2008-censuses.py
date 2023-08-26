@@ -16,6 +16,7 @@ Limit the query to the top 10 states using the .limit() method.
 Execute the query and store it as results.
 Print the state and the population change for each result. This has been done for you, so hit 'Submit Answer' to see the result!
 '''
+
 # Build query to return state name and population difference from 2008 to 2000
 stmt = select([census.columns.state,
      (census.columns.pop2008-census.columns.pop2000).label('pop_change')
@@ -35,4 +36,4 @@ results = connection.execute(stmt).fetchall()
 
 # Print the state and population change for each record
 for result in results:
-    print('{}:{}'.format(result.state, result.pop_change))
+    print(f'{result.state}:{result.pop_change}')

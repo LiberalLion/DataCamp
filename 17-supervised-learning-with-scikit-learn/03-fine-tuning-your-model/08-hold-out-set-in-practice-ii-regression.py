@@ -53,6 +53,7 @@ R
 2
  and mean squared error.
 '''
+
 # Import necessary modules
 from sklearn.linear_model import ElasticNet
 from sklearn.metrics import mean_squared_error
@@ -79,6 +80,6 @@ gm_cv.fit(X_train, y_train)
 y_pred = gm_cv.predict(X_test)
 r2 = gm_cv.score(X_test, y_test)
 mse = mean_squared_error(y_test, y_pred)
-print("Tuned ElasticNet l1 ratio: {}".format(gm_cv.best_params_))
-print("Tuned ElasticNet R squared: {}".format(r2))
-print("Tuned ElasticNet MSE: {}".format(mse))
+print(f"Tuned ElasticNet l1 ratio: {gm_cv.best_params_}")
+print(f"Tuned ElasticNet R squared: {r2}")
+print(f"Tuned ElasticNet MSE: {mse}")

@@ -4,7 +4,7 @@ import librosa as lr
 from glob import glob
 
 # List all the wav files in the folder
-audio_files = glob(data_dir + '/*.wav')
+audio_files = glob(f'{data_dir}/*.wav')
 
 # Read in the first audio file, create the time array
 audio, sfreq = lr.load(audio_files[0])

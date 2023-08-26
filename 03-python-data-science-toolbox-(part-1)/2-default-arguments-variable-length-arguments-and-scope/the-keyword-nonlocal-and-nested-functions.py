@@ -17,22 +17,24 @@ def echo_shout(word):
     
     # Concatenate word with itself: echo_word
     echo_word = word * 2
-    
+
     #Print echo_word
     print(echo_word)
-    
+
     # Define inner function shout()
     def shout():
-        """Alter a variable in the enclosing scope"""    
+        """Alter a variable in the enclosing scope"""
         #Use echo_word in nonlocal scope
         nonlocal echo_word
-        
+
         #Change echo_word to echo_word concatenated with '!!!'
-        echo_word = echo_word + '!!!'
-    
+        echo_word = f'{echo_word}!!!'
+        
+        # Call function shout()
+
     # Call function shout()
     shout()
-    
+
     #Print echo_word
     print(echo_word)
 

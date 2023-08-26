@@ -34,21 +34,19 @@ def count_entries(df, col_name='lang'):
     try:
         # Extract column from DataFrame: col
         col = df[col_name]
-        
+
         # Iterate over the column in dataframe
         for entry in col:
-    
+            
             # If entry is in cols_count, add 1
-            if entry in cols_count.keys():
+            if entry in cols_count:
                 cols_count[entry] += 1
-            # Else add the entry to cols_count, set the value to 1
             else:
                 cols_count[entry] = 1
-    
+
         # Return the cols_count dictionary
         return cols_count
 
-    # Add except block
     except:
         print('The DataFrame does not have a ' + col_name + ' column.')
 

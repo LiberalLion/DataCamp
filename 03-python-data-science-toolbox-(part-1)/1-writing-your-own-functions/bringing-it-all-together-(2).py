@@ -36,17 +36,16 @@ def count_entries(df, col_name):
 
     # Initialize an empty dictionary: langs_count
     langs_count = {}
-    
+
     # Extract column from DataFrame: col
     col = df[col_name]
-    
+
     # Iterate over lang column in DataFrame
     for entry in col:
 
         # If the language is in langs_count, add 1
-        if entry in langs_count.keys():
+        if entry in langs_count:
             langs_count[entry] += 1
-        # Else add the language to langs_count, set the value to 1
         else:
             langs_count[entry] = 1
 

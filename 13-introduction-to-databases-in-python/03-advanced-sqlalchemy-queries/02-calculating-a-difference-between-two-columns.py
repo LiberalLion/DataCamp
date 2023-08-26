@@ -20,8 +20,9 @@ Use the .limit() method on the statement to return only 5 records.
 Execute the statement and fetchall the records.
 The print statement has already been written for you. Hit 'Submit Answer' to view the results!
 '''
- # Build query to return state names by population difference from 2008 to 2000: stmt
-stmt = select([census.columns.state, (census.columns.pop2008-census.columns.pop2000).label('pop_change')])
+
+
+ # Build query to return state names by population difference from 2008 to 2000: stmtstmt = select([census.columns.state, (census.columns.pop2008-census.columns.pop2000).label('pop_change')])
 
 # Append group by for the state: stmt
 stmt = stmt.group_by(census.columns.state)
@@ -37,4 +38,4 @@ results = connection.execute(stmt).fetchall()
 
 # Print the state and population change for each record
 for result in results:
-    print('{}:{}'.format(result.state, result.pop_change))
+    print(f'{result.state}:{result.pop_change}')

@@ -28,8 +28,7 @@ def check_null_or_valid(row_data):
     """
     no_na = row_data.dropna()[1:-1]
     numeric = pd.to_numeric(no_na)
-    ge0 = numeric >= 0
-    return ge0
+    return numeric >= 0
 
 # Check whether the first column is 'Life expectancy'
 assert g1800s.columns[0] == 'Life expectancy'

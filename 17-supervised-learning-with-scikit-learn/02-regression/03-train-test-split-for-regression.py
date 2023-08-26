@@ -19,6 +19,7 @@ R
  score using the .score() method on the test set.
 Compute and print the RMSE. To do this, first compute the Mean Squared Error using the mean_squared_error() function with the arguments y_test and y_pred, and then take its square root using np.sqrt().
 '''
+
 # Import necessary modules
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
@@ -37,7 +38,7 @@ reg_all.fit(X_train, y_train)
 y_pred = reg_all.predict(X_test)
 
 # Compute and print R^2 and RMSE
-print("R^2: {}".format(reg_all.score(X_test, y_test)))
+print(f"R^2: {reg_all.score(X_test, y_test)}")
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-print("Root Mean Squared Error: {}".format(rmse))
+print(f"Root Mean Squared Error: {rmse}")
 

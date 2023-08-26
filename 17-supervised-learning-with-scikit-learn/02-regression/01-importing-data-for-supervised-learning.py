@@ -14,6 +14,7 @@ Read the file 'gapminder.csv' into a DataFrame df using the read_csv() function.
 Create array X for the 'fertility' feature and array y for the 'life' target variable.
 Reshape the arrays by using the .reshape() method and passing in (-1, 1).
 '''
+
 # Import numpy and pandas
 import numpy as np
 import pandas as pd
@@ -26,13 +27,13 @@ y = df['life'].values
 X = df['fertility'].values
 
 # Print the dimensions of X and y before reshaping
-print("Dimensions of y before reshaping: {}".format(y.shape))
-print("Dimensions of X before reshaping: {}".format(X.shape))
+print(f"Dimensions of y before reshaping: {y.shape}")
+print(f"Dimensions of X before reshaping: {X.shape}")
 
 # Reshape X and y
 y = y.reshape(-1,1)
 X = X.reshape(-1,1)
 
 # Print the dimensions of X and y after reshaping
-print("Dimensions of y after reshaping: {}".format(y.shape))
-print("Dimensions of X after reshaping: {}".format(X.shape))
+print(f"Dimensions of y after reshaping: {y.shape}")
+print(f"Dimensions of X after reshaping: {X.shape}")

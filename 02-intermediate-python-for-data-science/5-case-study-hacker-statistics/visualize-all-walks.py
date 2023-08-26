@@ -15,13 +15,14 @@ Instructions
 Now every row in np_all_walks represents the position after 1 throw for the 10 random walks.
 -Use plt.plot() to plot np_aw_t; also include a plt.show(). Does it look better this time?
 '''
+
 import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123)
 all_walks = []
-for i in range(10) :
+for _ in range(10):
     random_walk = [0]
-    for x in range(100) :
+    for _ in range(100):
         step = random_walk[-1]
         dice = np.random.randint(1,7)
         if dice <= 2:

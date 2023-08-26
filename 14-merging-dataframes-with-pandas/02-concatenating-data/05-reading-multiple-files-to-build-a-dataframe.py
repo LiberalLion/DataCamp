@@ -17,14 +17,15 @@ Read file_name into a DataFrame called medal_df. Specify the keyword arguments h
 Append medal_df to medals using the list .append() method.
 Concatenate the list of DataFrames medals horizontally (using axis='columns') to create a single DataFrame called medals. Print it in its entirety.
 '''
+
 for medal in medal_types:
 
     # Create the file name: file_name
-    file_name = "%s_top5.csv" % medal
-    
+    file_name = f"{medal}_top5.csv"
+
     # Create list of column names: columns
     columns = ['Country', medal]
-    
+
     # Read file_name into a DataFrame: df
     medal_df = pd.read_csv(file_name, header=0, index_col='Country', names=columns)
 

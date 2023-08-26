@@ -16,6 +16,7 @@ Create training and test sets, with 30% used for testing. Use a random state of 
 Fit the pipeline to the training set.
 Compute the accuracy scores of the scaled and unscaled models by using the .score() method inside the provided print() functions.
 '''
+
 # Import the necessary modules
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
@@ -23,7 +24,7 @@ from sklearn.pipeline import Pipeline
 # Setup the pipeline steps: steps
 steps = [('scaler', StandardScaler()),
         ('knn', KNeighborsClassifier())]
-        
+
 # Create the pipeline: pipeline
 pipeline = Pipeline(steps)
 
@@ -37,5 +38,5 @@ knn_scaled = pipeline.fit(X_train, y_train)
 knn_unscaled = KNeighborsClassifier().fit(X_train, y_train)
 
 # Compute and print metrics
-print('Accuracy with Scaling: {}'.format(knn_scaled.score(X_test, y_test)))
-print('Accuracy without Scaling: {}'.format(knn_unscaled.score(X_test, y_test)))
+print(f'Accuracy with Scaling: {knn_scaled.score(X_test, y_test)}')
+print(f'Accuracy without Scaling: {knn_unscaled.score(X_test, y_test)}')

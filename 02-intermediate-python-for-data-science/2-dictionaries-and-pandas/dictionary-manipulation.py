@@ -11,11 +11,15 @@ Instructions
 -Add another key:value pair to europe: 'poland' is the key, 'warsaw' is the corresponding value.
 -Print out europe.
 '''
-# Definition of dictionary
-europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin', 'norway':'oslo' }
 
-# Add italy to europe
-europe["italy"] = 'rome'
+# Definition of dictionary
+europe = {
+    'spain': 'madrid',
+    'france': 'paris',
+    'germany': 'berlin',
+    'norway': 'oslo',
+    "italy": 'rome',
+}
 
 # Print out italy in europe
 print('italy' in europe)

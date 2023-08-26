@@ -15,6 +15,7 @@ Count the total number of NaNs using the .isnull() and .sum() methods. This has 
 Drop the rows with missing values from df using .dropna().
 Hit 'Submit Answer' to see how many rows were lost by dropping the missing values.
 '''
+
 # Convert '?' to NaN
 df[df == '?'] = np.nan
 
@@ -22,10 +23,12 @@ df[df == '?'] = np.nan
 print(df.isnull().sum())
 
 # Print shape of original DataFrame
-print("Shape of Original DataFrame: {}".format(df.shape))
+print(f"Shape of Original DataFrame: {df.shape}")
 
 # Drop missing values and print shape of new DataFrame
 df = df.dropna()
 
 # Print shape of new DataFrame
-print("Shape of DataFrame After Dropping All Rows with Missing Values: {}".format(df.shape))
+print(
+    f"Shape of DataFrame After Dropping All Rows with Missing Values: {df.shape}"
+)

@@ -25,6 +25,7 @@ iterate over the call to pd.read_csv() with a chunksize of 10.
 -In the inner loop, iterate over the column 'lang' in chunk by using a for loop. Use the
 loop variable entry.
 '''
+
 # Import packages
 import pandas as pd
 
@@ -36,7 +37,7 @@ for chunk in pd.read_csv('../_datasets/tweets.csv', chunksize=10):
 
     # Iterate over the column in DataFrame
     for entry in chunk['lang']:
-        if entry in counts_dict.keys():
+        if entry in counts_dict:
             counts_dict[entry] += 1
         else:
             counts_dict[entry] = 1

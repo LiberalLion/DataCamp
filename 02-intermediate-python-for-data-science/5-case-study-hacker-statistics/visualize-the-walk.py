@@ -18,12 +18,13 @@ Add some lines of code after the for loop:
 -Use plt.plot() to plot random_walk.
 -Finish off with plt.show() to actually display the plot.
 '''
+
 # Initialization
 import numpy as np
 np.random.seed(123)
 random_walk = [0]
 
-for x in range(100) :
+for _ in range(100):
     step = random_walk[-1]
     dice = np.random.randint(1,7)
 

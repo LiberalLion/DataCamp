@@ -26,15 +26,7 @@ to the Shell.
 def gibberish(*args):
     """Concatenate strings in *args together."""
 
-    # Initialize an empty string: hodgepodge
-    hodgepodge = ""
-
-    # Concatenate the strings in args
-    for word in args:
-        hodgepodge += word
-
-    # Return hodgepodge
-    return hodgepodge
+    return "".join(args)
 
 # Call gibberish() with one string: one_word
 one_word = gibberish('luke')

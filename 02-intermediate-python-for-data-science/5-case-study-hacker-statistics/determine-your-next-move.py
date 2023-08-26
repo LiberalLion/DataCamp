@@ -15,6 +15,7 @@ Instructions
     -Else, you throw the dice again. The number of eyes is the number of steps you go up.
 -Print out dice and step. Given the value of dice, was step updated correctly?
 '''
+
 # Import numpy and set seed
 import numpy as np
 np.random.seed(123)
@@ -26,12 +27,12 @@ step = 50
 dice = np.random.randint(1, 7)
 
 # Finish the control construct
-if dice <= 2 :
-    step = step - 1
-elif dice < 6 :
-    step = step + 1
-else :
-    step = step + np.random.randint(1,7)
+if dice <= 2:
+    step -= 1
+elif dice < 6:
+    step += 1
+else:
+    step += np.random.randint(1,7)
 
 # Print out dice and step
 print(dice)

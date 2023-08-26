@@ -21,13 +21,4 @@ def is_in_triangle(G, n):
     
     Returns a boolean.
     """
-    in_triangle = False
-    
-    # Iterate over all possible triangle relationship combinations
-    for n1, n2 in combinations(G.neighbors(n),2):
-    
-        # Check if an edge exists between n1 and n2
-        if G.has_edge(n1, n2):
-            in_triangle = True
-            break
-    return in_triangle
+    return any(G.has_edge(n1, n2) for n1, n2 in combinations(G.neighbors(n), 2))

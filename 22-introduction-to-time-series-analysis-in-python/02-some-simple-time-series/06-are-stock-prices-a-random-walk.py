@@ -12,6 +12,7 @@ Run the Augmented Dickey-Fuller test on the series of closing stock prices, whic
 Print out the entire output, which includes the test statistic, the p-values, and the critical values for tests with 1%, 10%, and 5% levels.
 Print out just the p-value of the test (results[0] is the test statistic, and results[1] is the p-value).
 '''
+
 # Import the adfuller module from statsmodels
 from statsmodels.tsa.stattools import adfuller
 
@@ -20,4 +21,4 @@ results = adfuller(AMZN['Adj Close'])
 print(results)
 
 # Just print out the p-value
-print('The p-value of the test on prices is: ' + str(results[1]))
+print(f'The p-value of the test on prices is: {str(results[1])}')

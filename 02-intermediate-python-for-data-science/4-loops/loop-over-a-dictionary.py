@@ -16,10 +16,11 @@ Instructions
 Write a for loop that goes through each key:value pair of europe. On each iteration,
 "the capital of x is y" should be printed out, where x is the key and y is the value of the pair.
 '''
+
 # Definition of dictionary
 europe = {'spain':'madrid', 'france':'paris', 'germany':'bonn', 
           'norway':'oslo', 'italy':'rome', 'poland':'warsaw', 'australia':'vienna' }
-          
+
 # Iterate over europe
 for k, v in europe.items():
-    print("the capital of " + str(k) + " is " + str(v))
+    print(f"the capital of {str(k)} is {str(v)}")

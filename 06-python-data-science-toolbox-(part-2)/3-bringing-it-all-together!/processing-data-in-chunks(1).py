@@ -21,6 +21,7 @@ Instructions
 -Complete the for loop so that it iterates 1000 times to perform the loop body and process only
 the first 1000 rows of data of the file.
 '''
+
 # Open a connection to the file
 with open('world_dev_ind.csv') as file:
 
@@ -31,8 +32,7 @@ with open('world_dev_ind.csv') as file:
     counts_dict = {}
 
     # Process only the first 1000 rows
-    for j in range(0, 1000):
-
+    for _ in range(0, 1000):
         # Split the current line into a list: line
         line = file.readline().split(',')
 
@@ -40,10 +40,9 @@ with open('world_dev_ind.csv') as file:
         first_col = line[0]
 
         # If the column value is in the dict, increment its value
-        if first_col in counts_dict.keys():
+        if first_col in counts_dict:
             counts_dict[first_col] += 1
 
-        # Else, add to the dict and set value to 1
         else:
             counts_dict[first_col] = 1
 

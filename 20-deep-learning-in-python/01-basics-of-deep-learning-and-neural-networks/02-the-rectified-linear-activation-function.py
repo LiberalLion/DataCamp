@@ -18,11 +18,7 @@ Apply the relu() function to node_1_input to calculate node_1_output.
 '''
 def relu(input):
     '''Define your relu activation function here'''
-    # Calculate the value for the output of the relu function: output
-    output = max(0, input)
-    
-    # Return the value just calculated
-    return(output)
+    return max(0, input)
 
 # Calculate node 0 value: node_0_output
 node_0_input = (input_data * weights['node_0']).sum()

@@ -15,6 +15,7 @@ Fit the classifier to the data.
 Predict the labels of the training data, X.
 Predict the label of the new data point X_new.
 '''
+
 # Import KNeighborsClassifier from sklearn.neighbors
 from sklearn.neighbors import KNeighborsClassifier 
 
@@ -33,4 +34,4 @@ y_pred = knn.predict(X)
 
 # Predict and print the label for the new data point X_new
 new_prediction = knn.predict(X_new)
-print("Prediction: {}".format(new_prediction))
+print(f"Prediction: {new_prediction}")

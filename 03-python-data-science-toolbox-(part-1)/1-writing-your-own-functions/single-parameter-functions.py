@@ -21,7 +21,7 @@ Instructions
 def shout(word):
     """Print a string with three exclamation marks"""
     # Concatenate the strings: shout_word
-    shout_word = word + '!!!'
+    shout_word = f'{word}!!!'
 
     # Print shout_word
     print(shout_word)

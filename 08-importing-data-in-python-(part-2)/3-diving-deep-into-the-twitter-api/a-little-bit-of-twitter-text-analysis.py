@@ -3,11 +3,7 @@ import re
 def word_in_text(word, tweet):
     word = word.lower()
     text = tweet.lower()
-    match = re.search(word, tweet)
-
-    if match:
-        return True
-    return False
+    return bool(match := re.search(word, tweet))
 
 # Initialize list to store tweet counts
 [clinton, trump, sanders, cruz] = [0, 0, 0, 0]

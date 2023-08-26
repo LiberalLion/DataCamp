@@ -12,4 +12,4 @@ json_data = r.json()
 
 # Print each key-value pair in json_data
 for k in json_data.keys():
-    print(k + ': ', json_data[k])
+    print(f'{k}: ', json_data[k])

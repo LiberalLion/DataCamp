@@ -30,7 +30,7 @@ def report_status(**kwargs):
     # Iterate over the key-value pairs of kwargs
     for key, value in kwargs.items():
         # Print out the keys and values, separated by a colon ':'
-        print(key + ": " + value)
+        print(f"{key}: {value}")
 
     print("\nEND REPORT")
 

@@ -24,16 +24,12 @@ yell1 and yell2 (remember, shout_all returns 2 variables!).
 def shout_all(word1, word2):
     
     # Concatenate word1 with '!!!': shout1
-    shout1 = word1 + '!!!'
-    
-    # Concatenate word2 with '!!!': shout2
-    shout2 = word2 + '!!!'
-    
-    # Construct a tuple with shout1 and shout2: shout_words
-    shout_words = (shout1, shout2)
+    shout1 = f'{word1}!!!'
 
-    # Return shout_words
-    return shout_words
+    # Concatenate word2 with '!!!': shout2
+    shout2 = f'{word2}!!!'
+
+    return shout1, shout2
 
 # Pass 'congratulations' and 'you' to shout_all(): yell1, yell2
 yell1, yell2 = shout_all('congratulations', 'you')
